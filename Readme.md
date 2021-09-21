@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Aleksandrs Timofejevs](https://up.htmlacademy.ru/htmlcss/32/user/1853091).
-* Наставник: `Евгений Петров`.
+* Наставник: `Evgeniy Petrov`.
 
 ---
 
