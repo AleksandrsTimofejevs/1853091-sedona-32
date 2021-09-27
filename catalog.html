@@ -56,20 +56,20 @@
                 <fieldset class="filter-products-group">
                     <legend class="filter-products-title">Инфраструктура:</legend>
                     <label class="control">
-                        <input class="visually-hidden filter-products-services" type="checkbox" name="pool" value="yes"
+                        <input class="visually-hidden filter-products-services" type="checkbox" name="infrastructure" value="pool"
                             checked>
                         <span class="control-mark"></span>
                         <span class="control-label">Бассейн</span>
                     </label>
                     <label class="control">
-                        <input class="visually-hidden filter-products-services" type="checkbox" name="parking"
-                            value="yes">
+                        <input class="visually-hidden filter-products-services" type="checkbox" name="infrastructure"
+                            value="parking">
                         <span class="control-mark"></span>
                         <span class="control-label">Парковка</span>
                     </label>
                     <label class="control">
-                        <input class="visually-hidden filter-products-services" type="checkbox" name="wi-fi"
-                            value="yes">
+                        <input class="visually-hidden filter-products-services" type="checkbox" name="infrastructure"
+                            value="wi-fi">
                         <span class="control-mark"></span>
                         <span class="control-label">Wi-Fi</span>
                     </label>
@@ -221,12 +221,12 @@
                 </li>
             </ul>
 
-            <ul class="pagination">
+            <ol class="pagination">
                 <li class="pagination-item">
                     <a class="pagination-link pagination-current">1</a>
                 </li>
                 <li class="pagination-item">
-                    <a class="pagination-link">2</a>
+                    <button class="pagination-link pagination-jump-to-page" type="button">2</button>
                 </li>
                 <li class="pagination-item">
                     <a class="pagination-link">3</a>
@@ -235,12 +235,12 @@
                     <a class="pagination-link">4</a>
                 </li>
                 <li class="pagination-item">
-                    <a class="pagination-link pagination-random-page">...</a>
+                    <button class="pagination-link pagination-jump-to-page" type="button">...</button>
                 </li>
                 <li class="pagination-item">
                     <a class="pagination-link">10</a>
                 </li>
-            </ul>
+            </ol>
             <button class="pagination show-more" type="button">Загрузить ещё</button>
 
             <div class="preview-count">
@@ -268,7 +268,7 @@
     </main>
 
     <footer class="page-footer">
-        <section class="footer-menu">
+
             <div class="social-media">
                 <h2 class="visually-hidden">Мы в социальных сетях</h2>
                 <ul class="social-media-list">
@@ -295,7 +295,6 @@
             <a href="https://htmlacademy.ru/" class="credits"><img src="#" alt="Логотип разработчика сайта HTML Academy"
                     class="credits-image"></a>
 
-        </section>
 
     </footer>
 
