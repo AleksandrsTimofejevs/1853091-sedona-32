@@ -1,0 +1,57 @@
+body {
+    width: 1200px;
+    margin: auto 40px;
+}
+
+.newsletter {
+    background-image: url('../img/index-newsletter-background.jpg');
+    height: 411px;
+}
+
+.intro::before {
+    content: '';
+    display: block;
+    width: 1200px;
+    height: 485px;
+    background: url('../img/divider\(1\).svg') 0 100% no-repeat, url('../img/welcome\(1\).svg') 50% 50% no-repeat, url('../img/intro-background.jpg');
+}
+
+.advantages-block-list li:first-child::before {
+    content: '';
+    display: block;
+    width: 800px;
+    height: 384px;
+    background: url('../img/open-range.jpg')
+}
+
+.advantages-block-list li:nth-child(2)::before {
+    content: '';
+    display: block;
+    width: 800px;
+    height: 384px;
+    background: url('../img/devils-bridge.jpg')
+}
+
+.advantages-block-list-unordered li:first-child::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url('../img/accommodations\(1\).svg') no-repeat;
+}
+
+.advantages-block-list-unordered li:nth-child(2)::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url('../img/eats\(1\).svg') no-repeat;
+}
+.advantages-block-list-unordered li:last-child::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url('../img/souvenirs\(1\).svg') no-repeat;
+}
+
