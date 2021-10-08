@@ -102,6 +102,22 @@ body {
     line-height: 36px;
 }
 
+.intro-text {
+    height: 282px;
+    padding: 0 240px;
+}
+
+.advantages-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-block-list-item {
+    display: inline-block;
+    width: 400px;
+    height: 384px;
+}
+
 .advantages-block-list-item-title {
     font-size: 24px;
     line-height: 28px;
@@ -147,7 +163,7 @@ body {
 
 .advantages-block-list li:nth-child(2)::before {
     content: '';
-    display: block;
+    display: inline-block;
     width: 800px;
     height: 384px;
     background: url('../img/devils-bridge.jpg')
@@ -155,7 +171,7 @@ body {
 
 .advantages-block-list-unordered li:first-child::before {
     content: '';
-    display: block;
+    display: inline-block;
     width: 80px;
     height: 80px;
     background: url('../img/accommodations.svg') no-repeat;
@@ -163,14 +179,14 @@ body {
 
 .advantages-block-list-unordered li:nth-child(2)::before {
     content: '';
-    display: block;
+    display: inline-block;
     width: 80px;
     height: 80px;
     background: url('../img/eats.svg') no-repeat;
 }
 .advantages-block-list-unordered li:last-child::before {
     content: '';
-    display: block;
+    display: inline-block;
     width: 80px;
     height: 80px;
     background: url('../img/souvenirs.svg') no-repeat;
