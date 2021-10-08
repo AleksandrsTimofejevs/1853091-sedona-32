@@ -14,7 +14,15 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -28,11 +36,36 @@ body {
     display: none;
 }
 
+.main-container {
+    flex-grow: 1;
+}
+
 .navigation {
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 25.88px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    order: 2;
+}
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
+    order: 1;
+}
+
+.navigation-user {
+    order: 3;
 }
 
 .navigation-link {
