@@ -37,7 +37,11 @@ body {
 }
 
 .visually-hidden {
-    display: none;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 .main-container {
@@ -124,58 +128,76 @@ body {
 
 /* Список преимуществ */
 
-.advantages-block {
-    display: flex;
-    flex-wrap: wrap;
+ol, ul {
+    padding: 0;
+    margin-left: 0;
 }
 
-.advantages-block-list-item {
-    display: inline-block;
+.advantages-list-item:last-child,
+.advantages-list-item:nth-last-child(2),
+.advantages-list-item:nth-last-child(3),
+.unordered-item {
     width: 400px;
     height: 384px;
 }
 
-.advantages-block-list-item-title {
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-list-unordered {
+    display: flex;
+}
+
+.advantages-list-item {
+    display: block;
+}
+
+.advantages-list-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advantages-list-item-title {
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
 }
 
-.first-advantage,
-.second-advantage {
+.first-advantage {
+    background: url('../img/open-range.jpg') 400px 0 no-repeat;
     background-color: #83B3D3;
     color: #FFFFFF;
+    height: 384px;
 }
 
-.advantages-block-list-unordered li:first-child,
-.advantages-block-list-unordered li:last-child,
-.advantages-block-list li:nth-child(3),
-.advantages-block-list li:last-child {
+.second-advantage {
+    width: 1200px;
+    height: 384px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #FFFFFF;
+    background: url('../img/devils-bridge.jpg') no-repeat;
+    background-color: #83B3D3;
+}
+
+.advantages-list-unordered li:first-child,
+.advantages-list-unordered li:last-child,
+.advantages-list li:nth-child(3),
+.advantages-list li:last-child {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-block-list li:nth-child(4) {
+.advantages-list li:nth-child(4) {
     background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-block-list li:first-child::before {
-    content: '';
-    display: block;
-    width: 800px;
-    height: 384px;
-    background: url('../img/open-range.jpg')
-}
-
-.advantages-block-list li:nth-child(2)::before {
-    content: '';
-    display: inline-block;
-    width: 800px;
-    height: 384px;
-    background: url('../img/devils-bridge.jpg')
-}
-
-.advantages-block-list-unordered li:first-child::before {
+.advantages-list-unordered li:first-child::before {
     content: '';
     display: inline-block;
     width: 80px;
@@ -183,14 +205,14 @@ body {
     background: url('../img/accommodations.svg') no-repeat;
 }
 
-.advantages-block-list-unordered li:nth-child(2)::before {
+.advantages-list-unordered li:nth-child(2)::before {
     content: '';
     display: inline-block;
     width: 80px;
     height: 80px;
     background: url('../img/eats.svg') no-repeat;
 }
-.advantages-block-list-unordered li:last-child::before {
+.advantages-list-unordered li:last-child::before {
     content: '';
     display: inline-block;
     width: 80px;
@@ -200,13 +222,26 @@ body {
 
 /* Блок ведущий к поиску гостиниц */
 
+.hotel-booking-container {
+    margin: 91px 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hotel-booking-instruction {
     font-size: 22px;
     line-height: 26px;
 }
 
 .hotel-booking a {
-    display: inline-block;
+    display: block;
+    box-sizing: border-box;
+    width: 575px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 13px 0;
     background-color: #756257;
     font-size: 20px;
     line-height: 36px;
@@ -220,7 +255,11 @@ body {
 
 .newsletter {
     background-image: url('../img/index-newsletter-background.jpg');
-    height: 411px;
+    padding: 94px 200px;
+}
+
+.newsletter-container {
+    text-align: center;
 }
 
 .newsletter-title {
@@ -262,15 +301,29 @@ body {
 
 /* Футер */
 
+.page-footer {
+    display: flex;
+    height: 120px;
+    justify-content: space-around;
+}
+
 .phone-number a {
+    display: inline-block;
+    width: 720px;
+    height: 50px;
+    text-align: center;
     font-size: 40px;
     line-height: 40px;
     color: #000000;
     text-decoration: none;
 }
 
+/* Страница каталога */
+
 .inner-header-title {
+    margin: 0;
     font-size: 60px;
+    color: #FFFFFF;
     line-height: 77.64px;
     font-weight: 700;
 }
@@ -278,12 +331,25 @@ body {
 .breadcrumbs {
     font-size: 16px;
     line-height: 20.7px;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+
+.filter-products-container {
+    margin-top: 45px;
 }
 
 .filter-products {
-    background: url('../img/catalog-background.jpg');
+    background: url('../img/catalog-background.jpg') no-repeat;
+    box-sizing: border-box;
     width: 1200px;
-    height: 408px;
+    padding: 35px 72px 83px;
+}
+
+.filter-products-form {
+    display: flex;
+    justify-content: space-between;
 }
 
 .filter-products-title {
@@ -315,15 +381,38 @@ body {
     border: none;
 }
 
+.catalog-page-controls {
+    display: flex;
+}
+
+.catalog-style {
+    display: flex;
+}
+
 .result-preview-output {
     font-size: 30px;
     line-height: 38.82px;
     font-weight: 700;
 }
 
+.item-card {
+    display: flex;
+}
+
 .info-booking {
     font-size: 16px;
     line-height: 20.7px ;
+    display: flex;
+    flex-direction: column;
+    margin-right: 361px;
+}
+
+.hotel-card-hints {
+    display: flex;
+}
+
+.hotel-card-buttons {
+    display: flex;
 }
 
 .hotel-card-title {
@@ -398,6 +487,16 @@ body {
     padding: 9px 0 10px 0;
 }
 
+.pagination {
+    display: flex;
+}
+
+.pagination-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .pagination-link {
     display: inline-block;
     width: 55px;
@@ -414,6 +513,13 @@ body {
     text-align: center;
     padding: 15px;
     border: none;
+}
+
+.show-more-block {
+    height: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .show-more {
