@@ -397,6 +397,7 @@ ol, ul {
 
 .item-card {
     display: flex;
+    justify-content: space-between;
 }
 
 .info-booking {
@@ -404,7 +405,7 @@ ol, ul {
     line-height: 20.7px ;
     display: flex;
     flex-direction: column;
-    margin-right: 361px;
+    flex-grow: 1;
 }
 
 .hotel-card-hints {
