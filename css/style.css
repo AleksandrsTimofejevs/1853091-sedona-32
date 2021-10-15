@@ -63,6 +63,8 @@ body {
 .logo {
     order: 2;
     margin: 0 auto;
+    margin-bottom: -5px;
+    z-index: 1;
 }
 
 .navigation-list {
