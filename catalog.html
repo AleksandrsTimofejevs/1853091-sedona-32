@@ -11,7 +11,7 @@
     <header class="page-header">
         <nav class="navigation">
             <img class="logo" src="./img/logo.svg" width="138" height="70" alt="Герб города Седона">
-            <ul class="navigation-list">
+            <ul class="navigation-list link-list">
                 <li class="navigation-item"><a class="navigation-link" href="./index.html">Главная</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="./about.html">О Седоне</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="#">Гостиницы</a></li>
@@ -54,66 +54,76 @@
                 <form class="filter-products-form" action="https://echo.htmlacademy.ru/" method="GET">
                     <fieldset class="filter-products-group">
                         <legend class="filter-products-title">Инфраструктура:</legend>
-                        <label class="control">
-                            <input class="visually-hidden filter-products-services" type="checkbox"
-                                name="infrastructure" value="pool" checked>
-                            <span class="control-mark"></span>
-                            <span class="control-label">Бассейн</span>
-                        </label>
-                        <label class="control">
-                            <input class="visually-hidden filter-products-services" type="checkbox"
-                                name="infrastructure" value="parking">
-                            <span class="control-mark"></span>
-                            <span class="control-label">Парковка</span>
-                        </label>
-                        <label class="control">
-                            <input class="visually-hidden filter-products-services" type="checkbox"
-                                name="infrastructure" value="wi-fi">
-                            <span class="control-mark"></span>
-                            <span class="control-label">Wi-Fi</span>
-                        </label>
+                        <div class="label-container">
+                            <label class="control">
+                                <input class="visually-hidden filter-products-services" type="checkbox"
+                                    name="infrastructure" value="pool" checked>
+                                <span class="control-mark"></span>
+                                <span class="control-label">Бассейн</span>
+                            </label>
+                            <label class="control">
+                                <input class="visually-hidden filter-products-services" type="checkbox"
+                                    name="infrastructure" value="parking">
+                                <span class="control-mark"></span>
+                                <span class="control-label">Парковка</span>
+                            </label>
+                            <label class="control">
+                                <input class="visually-hidden filter-products-services" type="checkbox"
+                                    name="infrastructure" value="wi-fi">
+                                <span class="control-mark"></span>
+                                <span class="control-label">Wi-Fi</span>
+                            </label>
+                        </div>
                     </fieldset>
                     <fieldset class="filter-products-group">
                         <legend class="filter-products-title">Тип жилья:</legend>
-                        <label class="control">
-                            <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
-                                value="hotel" checked>
-                            <span class="control-mark"></span>
-                            <span class="control-label">Гостиница</span>
-                        </label>
-                        <label class="control">
-                            <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
-                                value="motel">
-                            <span class="control-mark"></span>
-                            <span class="control-label">Мотель</span>
-                        </label>
-                        <label class="control">
-                            <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
-                                value="appartment">
-                            <span class="control-mark"></span>
-                            <span class="control-label">Апартаменты</span>
-                        </label>
+                        <div class="label-container">
+                            <label class="control">
+                                <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
+                                    value="hotel" checked>
+                                <span class="control-mark"></span>
+                                <span class="control-label">Гостиница</span>
+                            </label>
+                            <label class="control">
+                                <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
+                                    value="motel">
+                                <span class="control-mark"></span>
+                                <span class="control-label">Мотель</span>
+                            </label>
+                            <label class="control">
+                                <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
+                                    value="appartment">
+                                <span class="control-mark"></span>
+                                <span class="control-label">Апартаменты</span>
+                            </label>
+                        </div>
                     </fieldset>
                     <fieldset class="filter-products-group">
                         <legend class="filter-products-title">Стоимость, ₽:</legend>
-                        <label><input class="filter-products-input" type="number" name="min-price" value="0">от</label>
-                        <label><input class="filter-products-input" type="number" name="max-price"
-                                value="9000">до</label>
-
-                        <div class="slider">
-                            <input type="range" name="left-toggle" id="left-toggle" min="0" max="9000" value="0">
-                            <input type="range" name="left-toggle" id="left-toggle" min="0" max="9000" value="8000">
-                            <div class="two-toggle-slider">
-                                <div class="line"></div>
-                                <div class="selected-range"></div>
-                                <div class="left-toggle"></div>
-                                <div class="right-toggle"></div>
+                        <div class="pricing-container">
+                            <div class="input-container">
+                                <label><input class="filter-products-input" type="number" name="min-price" value="0">от</label>
+                                <label><input class="filter-products-input" type="number" name="max-price"
+                                        value="9000">до</label>
+                            </div>
+    
+                            <div class="slider">
+                                <input type="range" name="left-toggle" id="left-toggle" min="0" max="9000" value="0">
+                                <input type="range" name="left-toggle" id="left-toggle" min="0" max="9000" value="8000">
+                                <div class="two-toggle-slider">
+                                    <div class="line"></div>
+                                    <div class="selected-range"></div>
+                                    <div class="left-toggle"></div>
+                                    <div class="right-toggle"></div>
+                                </div>
                             </div>
                         </div>
 
                     </fieldset>
-                    <button class="submit-button" type="submit">Применить</button>
-                    <button class="reset-button" type="reset">Сбросить</button>
+                    <div class="filter-buttons-container">
+                        <button class="submit-button" type="submit">Применить</button>
+                        <button class="reset-button" type="reset">Сбросить</button>
+                    </div>
                 </form>
         </section>
         </section>
@@ -170,8 +180,7 @@
                         <div class="stars">
                             <span class="four-stars"></span>
                         </div>
-                        <span class="rating">Рейтинг:</span>
-                        <output class="rating-mark-output"></output>
+                        <span class="rating">Рейтинг:<output class="rating-mark-output"></output></span>
                     </div>
                 </li>
                 <li class="item-card">
@@ -192,8 +201,7 @@
                         <div class="stars">
                             <span class="three-stars"></span>
                         </div>
-                        <span class="rating">Рейтинг:</span>
-                        <output class="rating-mark-output"></output>
+                        <span class="rating">Рейтинг:<output class="rating-mark-output"></output></span>
                     </div>
                 </li>
                 <li class="item-card">
@@ -214,8 +222,7 @@
                         <div class="stars">
                             <span class="two-stars"></span>
                         </div>
-                        <span class="rating">Рейтинг:</span>
-                        <output class="rating-mark-output"></output>
+                        <span class="rating">Рейтинг:<output class="rating-mark-output"></output></span>
                     </div>
                 </li>
                 <li class="item-card">
@@ -236,8 +243,7 @@
                         <div class="stars">
                             <span class="two-stars"></span>
                         </div>
-                        <span class="rating">Рейтинг:</span>
-                        <output class="rating-mark-output"></output>
+                        <span class="rating">Рейтинг:<output class="rating-mark-output"></output></span>
                     </div>
                 </li>
             </ul>
