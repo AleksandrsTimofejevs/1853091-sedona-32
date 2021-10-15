@@ -56,24 +56,35 @@ body {
     font-size: 20px;
     line-height: 25.88px;
     display: flex;
-    padding: 0 72px;
+    justify-content: space-between;
 }
 
 .logo {
     order: 2;
-    margin: 0 auto;
+    margin: 0 209px 0 151px;
 }
 
 .navigation-list {
-    width: 126px;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 310px;
+    margin-left: 71px;
     padding: 0;
     order: 1;
 }
 
+.navigation-item {
+    margin-right: 33px;
+}
+
+.navigation-item:last-child {
+    margin-right: 0;
+}
+
 .navigation-user {
-    width: 250px;
     order: 3;
+    margin-right: 71px;
 }
 
 .navigation-link {
@@ -112,7 +123,8 @@ body {
 
 .intro-text {
     height: 282px;
-    padding: 0 240px;
+    padding: 63px 240px 79px;
+    text-align: center;
 }
 
 .intro::before {
@@ -129,8 +141,10 @@ body {
 /* Список преимуществ */
 
 ol, ul {
+    margin: 0;
     padding: 0;
     margin-left: 0;
+    list-style-type: none;
 }
 
 .advantages-list-item:last-child,
@@ -158,6 +172,7 @@ ol, ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .advantages-list-item-title {
@@ -166,6 +181,11 @@ ol, ul {
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
+    margin-bottom: 25px;
+}
+
+.advantages-list-item-description {
+    text-align: center;
 }
 
 .first-advantage {
@@ -186,6 +206,19 @@ ol, ul {
     background-color: #83B3D3;
 }
 
+.unordered-item {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 89px 75px 79px;
+}
+
+.unordered-item p {
+    margin: 0;
+}
+
 .advantages-list-unordered li:first-child,
 .advantages-list-unordered li:last-child,
 .advantages-list li:nth-child(3),
@@ -203,6 +236,7 @@ ol, ul {
     width: 80px;
     height: 80px;
     background: url('../img/accommodations.svg') no-repeat;
+    margin-bottom: 23px;
 }
 
 .advantages-list-unordered li:nth-child(2)::before {
@@ -211,6 +245,7 @@ ol, ul {
     width: 80px;
     height: 80px;
     background: url('../img/eats.svg') no-repeat;
+    margin-bottom: 23px;
 }
 .advantages-list-unordered li:last-child::before {
     content: '';
@@ -218,6 +253,7 @@ ol, ul {
     width: 80px;
     height: 80px;
     background: url('../img/souvenirs.svg') no-repeat;
+    margin-bottom: 23px;
 }
 
 /* Блок ведущий к поиску гостиниц */
@@ -307,6 +343,11 @@ ol, ul {
     justify-content: space-around;
 }
 
+.social-media-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .phone-number a {
     display: inline-block;
     width: 720px;
@@ -332,6 +373,7 @@ ol, ul {
     font-size: 16px;
     line-height: 20.7px;
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     list-style-type: none;
 }
@@ -349,6 +391,7 @@ ol, ul {
 
 .filter-products-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -387,6 +430,7 @@ ol, ul {
 
 .catalog-style {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .result-preview-output {
@@ -410,6 +454,7 @@ ol, ul {
 
 .hotel-card-hints {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .hotel-card-buttons {
