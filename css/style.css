@@ -36,6 +36,12 @@ body {
     padding: 0 40px;
 }
 
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -81,21 +87,21 @@ body {
     justify-content: flex-end;
 }
 
-.navigation-user li:first-child {
+.navigation-user .navigation-item:first-child {
     margin-right: 21px;
 }
 
-.link-list li,
-.navigation-user li:nth-child(2) {
+.link-list .navigation-item,
+.navigation-user .navigation-item:nth-child(2) {
     margin-right: 33px;
 }
 
-.link-list li:nth-child(3n) {
+.link-list .navigation-item:nth-child(3n) {
     margin-right: 0;
 }
 
-.navigation-user li:first-child,
-.navigation-user li:nth-child(2) {
+.navigation-user .navigation-item:first-child,
+.navigation-user .navigation-item:nth-child(2) {
     width: 18px;
     height: 18px;
 }
@@ -105,7 +111,7 @@ body {
     text-decoration: none;
 }
 
-.navigation-user li:last-child {
+.navigation-user .navigation-item:last-child {
     font-size: 16px;
     line-height: 20.7px;
     text-transform: uppercase;
@@ -122,14 +128,15 @@ body {
 
 /* Анонс */
 
-.intro p:first-child, .hotel-booking-title {
+.intro-title, 
+.hotel-booking-title {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
 }
 
-.intro p:last-child {
+.intro-subtitle {
     font-size: 22px;
     line-height: 36px;
 }
@@ -152,12 +159,6 @@ body {
 }
 
 /* Список преимуществ */
-
-ol, ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
 
 .advantages-list-item:last-child,
 .advantages-list-item:nth-last-child(2),
@@ -187,6 +188,8 @@ ol, ul {
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 25px;
+    width: 180px;
+    text-align: center;
 }
 
 .advantages-list-item-description {
@@ -221,18 +224,12 @@ ol, ul {
     height: 384px;
 }
 
-.advantages h3, 
-.advantages h4 {
-    width: 180px;
-    text-align: center;
-}
-
-.advantages-list-item-container p {
+.advantages-list-item-description {
     width: 250px;
 }
 
-.first-advantage-container p,
-.second-advantage-container p {
+.first-advantage-container .advantages-list-item-description,
+.second-advantage-container .advantages-list-item-description {
     width: 220px;
 }
 
@@ -261,22 +258,22 @@ ol, ul {
     padding: 89px 75px 79px;
 }
 
-.unordered-item p {
+.unordered-item .advantages-list-item-description {
     margin: 0;
 }
 
-.advantages-list-unordered li:first-child,
-.advantages-list-unordered li:last-child,
-.advantages-list li:nth-child(3),
-.advantages-list li:last-child {
+.unordered-item:first-child,
+.unordered-item:last-child,
+.advantages-list .advantages-list-item:nth-child(3),
+.advantages-list .advantages-list-item:last-child {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-list li:nth-child(4) {
+.advantages-list .advantages-list-item:nth-child(4) {
     background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-list-unordered li:first-child::before {
+.unordered-item:first-child::before {
     content: '';
     display: inline-block;
     width: 80px;
@@ -285,7 +282,7 @@ ol, ul {
     margin-bottom: 23px;
 }
 
-.advantages-list-unordered li:nth-child(2)::before {
+.unordered-item:nth-child(2)::before {
     content: '';
     display: inline-block;
     width: 80px;
@@ -293,7 +290,7 @@ ol, ul {
     background: url('../img/eats.svg') no-repeat;
     margin-bottom: 23px;
 }
-.advantages-list-unordered li:last-child::before {
+.unordered-item:last-child::before {
     content: '';
     display: inline-block;
     width: 80px;
@@ -317,7 +314,7 @@ ol, ul {
     line-height: 26px;
 }
 
-.hotel-booking a {
+.hotel-search-button {
     display: block;
     box-sizing: border-box;
     width: 575px;
@@ -364,7 +361,7 @@ ol, ul {
     text-align: center;
 }
 
-.newsletter button {
+.subscription-button {
     display: inline-block;
     font-size: 20px;
     line-height: 26px;
@@ -372,20 +369,10 @@ ol, ul {
     color: #FFFFFF;
     background-color: #83B3D3;
     border: none;
-}
-
-.newsletter-form button {
-    display: inline-block;
     width: 200px;
     height: 60px;
-    background-color: #83B3D3;
     border-radius: 0 10px 10px 0;
-    border: none;
-    color: #FFFFFF;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 26px;
 }
 
 /* Футер */
@@ -413,7 +400,7 @@ ol, ul {
     flex-wrap: wrap;
 }
 
-.phone-number a {
+.phone-number-link {
     display: inline-block;
     width: 720px;
     height: 50px;
@@ -444,7 +431,7 @@ ol, ul {
 }
 
 .breadcrumbs-item,
-.breadcrumbs-item a {
+.breadcrumbs-link {
     margin-right: 10px;
     color: #FFFFFF;
     text-decoration: none;
@@ -479,15 +466,12 @@ ol, ul {
     font-weight: 700;
 }
 
-.control-label {
+.control-label,
+.control {
     color: white;
 }
 
-label {
-    color: white;
-}
-
-legend {
+.filter-products-title {
     font-size: 20px;
     line-height: 25.88px;
     font-weight: 700;
@@ -509,7 +493,7 @@ legend {
     margin-right: 81px;
 }
 
-input.filter-products-input {
+.input-container .filter-products-input {
     width: 100px;
 }
 
@@ -639,8 +623,7 @@ input.filter-products-input {
     margin: 0;
 }
 
-.button, 
-.info-booking button {
+.button {
     font-size: 16px;
     line-height: 20.7px;
     text-transform: uppercase;
@@ -761,7 +744,7 @@ input.filter-products-input {
     background-color: #83B3D3;
 }
 
-.preview-count label {
+.preview-count-name {
     color: #000000;
 }
 
