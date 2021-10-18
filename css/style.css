@@ -87,21 +87,21 @@ ol, ul {
     justify-content: flex-end;
 }
 
-.navigation-user .navigation-item:first-child {
+.navigation-user-item:first-child {
     margin-right: 21px;
 }
 
-.link-list .navigation-item,
-.navigation-user .navigation-item:nth-child(2) {
+.navigation-item,
+.navigation-user-item:nth-child(2) {
     margin-right: 33px;
 }
 
-.link-list .navigation-item:nth-child(3n) {
+.navigation-item:nth-child(3n) {
     margin-right: 0;
 }
 
-.navigation-user .navigation-item:first-child,
-.navigation-user .navigation-item:nth-child(2) {
+.navigation-user-item:first-child,
+.navigation-user-item:nth-child(2) {
     width: 18px;
     height: 18px;
 }
@@ -111,7 +111,7 @@ ol, ul {
     text-decoration: none;
 }
 
-.navigation-user .navigation-item:last-child {
+.navigation-user-item:last-child {
     font-size: 16px;
     line-height: 20.7px;
     text-transform: uppercase;
@@ -228,8 +228,7 @@ ol, ul {
     width: 250px;
 }
 
-.first-advantage-container .advantages-list-item-description,
-.second-advantage-container .advantages-list-item-description {
+.list-item-description-narrow {
     width: 220px;
 }
 
@@ -258,18 +257,15 @@ ol, ul {
     padding: 89px 75px 79px;
 }
 
-.unordered-item .advantages-list-item-description {
+.description-unordered {
     margin: 0;
 }
 
-.unordered-item:first-child,
-.unordered-item:last-child,
-.advantages-list .advantages-list-item:nth-child(3),
-.advantages-list .advantages-list-item:last-child {
+.list-item-light-fill {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-list .advantages-list-item:nth-child(4) {
+.list-item-dark-fill {
     background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -493,7 +489,7 @@ ol, ul {
     margin-right: 81px;
 }
 
-.input-container .filter-products-input {
+.filter-products-input {
     width: 100px;
 }
 
@@ -585,13 +581,16 @@ ol, ul {
     justify-content: space-between;
 }
 
+.hotel-card-image {
+    margin-right: 30px;
+}
+
 .info-booking {
     font-size: 16px;
     line-height: 20.7px ;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    margin-left: 30px;
 }
 
 .item-card {
@@ -612,10 +611,6 @@ ol, ul {
     display: flex;
 }
 
-.hotel-card-buttons .button {
-    margin-right: 8px;
-}
-
 .hotel-card-title {
     font-size: 24px;
     line-height: 31.06px;
@@ -634,6 +629,7 @@ ol, ul {
     border: none;
     width: 160px;
     height: 37px;
+    margin-right: 8px;
 }
 
 .details {
@@ -764,8 +760,8 @@ ol, ul {
     padding-bottom: 138px;
 }
 
-.newsletter-catalog .newsletter-title,
-.newsletter-catalog .newsletter-info {
+.newsletter-catalog-title,
+.newsletter-catalog-info {
     color: #000000;
 }
 
