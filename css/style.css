@@ -60,7 +60,7 @@ ol, ul {
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 20px;
-    line-height: 25.88px;
+    line-height: 26px;
     display: flex;
     justify-content: space-between;
     padding: 0 72px;
@@ -87,21 +87,21 @@ ol, ul {
     justify-content: flex-end;
 }
 
+.navigation-item,
+.navigation-user-item {
+    margin-right: 33px;
+}
+
 .navigation-user-item:first-child {
     margin-right: 21px;
 }
 
-.navigation-item,
-.navigation-user-item:nth-child(2) {
-    margin-right: 33px;
-}
-
-.navigation-item:nth-child(3n) {
+.navigation-item:last-child,
+.navigation-user-item:last-child {
     margin-right: 0;
 }
 
-.navigation-user-item:first-child,
-.navigation-user-item:nth-child(2) {
+.navigation-user-item:not(:last-child) {
     width: 18px;
     height: 18px;
 }
@@ -113,7 +113,7 @@ ol, ul {
 
 .navigation-user-item:last-child {
     font-size: 16px;
-    line-height: 20.7px;
+    line-height: 21px;
     text-transform: uppercase;
     display: inline-block;
     background-color: #756257;
@@ -161,8 +161,6 @@ ol, ul {
 /* Список преимуществ */
 
 .advantages-list-item:last-child,
-.advantages-list-item:nth-last-child(2),
-.advantages-list-item:nth-last-child(3),
 .unordered-item {
     width: 400px;
     height: 384px;
@@ -254,7 +252,6 @@ ol, ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 89px 75px 79px;
 }
 
 .description-unordered {
@@ -278,7 +275,7 @@ ol, ul {
     margin-bottom: 23px;
 }
 
-.unordered-item:nth-child(2)::before {
+.unordered-item:not(:first-child):not(:last-child)::before {
     content: '';
     display: inline-block;
     width: 80px;
@@ -406,7 +403,7 @@ ol, ul {
     margin-right: 30px;
 }
 
-.social-media-item:nth-child(3n) {
+.social-media-item:last-child {
     margin-right: 0;
 }
 
@@ -459,11 +456,11 @@ ol, ul {
     grid-column: 1 / 2;
 }
 
-.filter-products-group:nth-child(2) {
+.filter-products-group:not(:first-child):not(:last-of-type) {
     grid-column: 3 / 4;
 }
 
-.filter-products-group:nth-child(3) {
+.filter-products-group:last-of-type {
     grid-column: 5 / 6;
 }
 
@@ -484,7 +481,7 @@ ol, ul {
 
 .filter-products-title {
     font-size: 20px;
-    line-height: 25.88px;
+    line-height: 26px;
     font-weight: 700;
     color: #FFFFFF;
 }
@@ -508,7 +505,7 @@ ol, ul {
     border-radius: 4px;
     border: none;
     font-size: 16px;
-    line-height: 20.7px;
+    line-height: 21px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -526,13 +523,13 @@ ol, ul {
     margin: 0;
     font-size: 60px;
     color: #FFFFFF;
-    line-height: 77.64px;
+    line-height: 78px;
     font-weight: 700;
 }
 
 .breadcrumbs {
     font-size: 16px;
-    line-height: 20.7px;
+    line-height: 21px;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -557,7 +554,7 @@ ol, ul {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 38.82px;
+    line-height: 39px;
 }
 
 .search-result-preview {
@@ -580,13 +577,13 @@ ol, ul {
     margin-right: 8px;
 }
 
-.catalog-style-item:nth-child(3n) {
+.catalog-style-item:last-child {
     margin-right: 0;
 }
 
 .result-preview-output {
     font-size: 30px;
-    line-height: 38.82px;
+    line-height: 39px;
     font-weight: 700;
 }
 
@@ -615,7 +612,7 @@ ol, ul {
 
 .hotel-card-title {
     font-size: 24px;
-    line-height: 31.06px;
+    line-height: 31px;
     font-weight: 700;
     margin: 0;
 }
@@ -630,7 +627,7 @@ ol, ul {
 
 .button {
     font-size: 16px;
-    line-height: 20.7px;
+    line-height: 21px;
     text-transform: uppercase;
     color: #FFFFFF;
     font-weight: 700;
@@ -660,7 +657,7 @@ ol, ul {
     box-sizing: border-box;
     text-transform: uppercase;
     font-size: 16px;
-    line-height: 20.7px;
+    line-height: 21px;
     width: 160px;
     height: 37px;
     background-color: #F2F2F2;
@@ -698,126 +695,6 @@ ol, ul {
     height: 20px;
 }
 
-/*
-.catalog-page {
-    padding: 31px 72px 0px;
-}
-
-.item-card {
-    display: flex;
-    justify-content: space-between;
-}
-
-.hotel-card-image {
-    margin-right: 30px;
-}
-
-.info-booking {
-    font-size: 16px;
-    line-height: 20.7px ;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.item-card {
-    padding: 30px 0;
-}
-
-.hotel-card-hints {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: auto;
-}
-
-.hotel-type {
-    margin-right: 78px;
-}
-
-.hotel-card-buttons {
-    display: flex;
-}
-
-.hotel-card-title {
-    font-size: 24px;
-    line-height: 31.06px;
-    font-weight: 700;
-    margin: 0;
-}
-
-.button {
-    font-size: 16px;
-    line-height: 20.7px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    font-weight: 700;
-    background-color: #83B3D3;
-    border-radius: 4px;
-    border: none;
-    width: 160px;
-    height: 37px;
-    margin-right: 8px;
-}
-
-.details {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 151px;
-    height: 37px;
-    text-align: center;
-    padding: 9px 0 10px 0;
-    background-color: #756257;
-    border-radius: 4px;
-    border: none;
-    text-decoration: none;
-}
-
-.level {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.four-stars::before {
-    content: '';
-    display: inline-block;
-    background: url('/img/fours-stars.svg') 50% no-repeat;
-    width: 160px;
-    height: 20px;
-}
-
-.three-stars::before {
-    content: '';
-    display: inline-block;
-    background: url('/img/three-stars.svg') 50% no-repeat;
-    width: 160px;
-    height: 20px;
-}
-
-.two-stars::before {
-    content: '';
-    display: inline-block;
-    background: url('/img/two-stars.svg') 50% no-repeat;
-    width: 160px;
-    height: 20px;
-}
-
-.rating {
-    display: inline-block;
-    box-sizing: border-box;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 20.7px;
-    width: 160px;
-    height: 37px;
-    background-color: #F2F2F2;
-    border-radius: #F2F2F2;
-    border: none;
-    text-align: center;
-    padding: 9px 0 10px 0;
-} */
-
 .pagination {
     display: flex;
 }
@@ -836,7 +713,7 @@ ol, ul {
     background-color: #83B3D3;
     border-radius: 4px;
     font-size: 20px;
-    line-height: 25.88px;
+    line-height: 26px;
     color: #FFFFFF;
     font-weight: 700;
     text-transform: uppercase;   
@@ -858,7 +735,7 @@ ol, ul {
     width: 625px;
     height: 55px;
     font-size: 20px;
-    line-height: 25.88px;
+    line-height: 26px;
     font-weight: 700;
     color: #FFFFFF;
     text-transform: uppercase;
