@@ -42,6 +42,10 @@ ol, ul {
     list-style-type: none;
 }
 
+button, input, select, option, textarea {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -378,11 +382,12 @@ ol, ul {
 .hotel-search-button {
     display: inline-block;
     width: 575px;
+    height: 60px;
     box-sizing: border-box;
     border: 3px solid transparent;
     border-radius: 10px;
     text-align: center;
-    padding: 1rem 2rem;
+    padding-top: 18px;
     background-color: #756257;
     font-size: 20px;
     font-weight: 700;
@@ -1051,7 +1056,7 @@ ol, ul {
     width: 151px;
     height: 37px;
     text-align: center;
-    padding: 9px 0 10px 0;
+    padding: 5px 0 5px 0;
     background-color: rgba(125, 181, 79, 1);
     border-radius: 4px;
     border: 3px solid transparent;
@@ -1084,7 +1089,7 @@ ol, ul {
     width: 151px;
     height: 37px;
     text-align: center;
-    padding: 9px 0 10px 0;
+    padding: 5px 0 5px 0;
     background-color: #756257;
     border-radius: 4px;
     border: 3px solid transparent;
