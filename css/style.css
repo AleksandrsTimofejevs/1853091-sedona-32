@@ -36,16 +36,6 @@ body {
     padding: 0 40px;
 }
 
-ol, ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-button, input, select, option, textarea {
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-}
-
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -84,6 +74,8 @@ button, input, select, option, textarea {
     padding: 0;
     order: 1;
     width: 333px;
+    margin: 0;
+    list-style-type: none;
 }
 
 .navigation-user {
@@ -247,6 +239,9 @@ button, input, select, option, textarea {
 .advantages-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .advantages-list-unordered {
@@ -455,6 +450,7 @@ button, input, select, option, textarea {
 }
 
 .subscription-button {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: inline-block;
     font-size: 20px;
     line-height: 26px;
@@ -487,6 +483,7 @@ button, input, select, option, textarea {
 }
 
 .email-input {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     flex-grow: 1;
     border-radius: 10px 0 0 10px;
     border: none;
@@ -520,6 +517,12 @@ button, input, select, option, textarea {
     justify-content: space-between;
     align-items: center;
     padding: 0 72px;
+}
+
+.social-media-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .social-media-item {
@@ -718,6 +721,7 @@ button, input, select, option, textarea {
 }
 
 .submit-button {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: inline-block;
     width: 160px;
     height: 48px;
@@ -750,6 +754,7 @@ button, input, select, option, textarea {
 }
 
 .reset-button {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: inline-block;
     width: 100px;
     height: 32px;
@@ -791,6 +796,7 @@ button, input, select, option, textarea {
     flex-wrap: wrap;
     margin: 0;
     list-style-type: none;
+    padding: 0;
 }
 
 .breadcrumbs-home-icon {
@@ -889,6 +895,9 @@ button, input, select, option, textarea {
 .catalog-style {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .catalog-style-item {
@@ -909,7 +918,6 @@ button, input, select, option, textarea {
 .catalog-style-item-current {
     border: 2px solid #000000;
 }
-
 
 .view-button {
     outline: none;
@@ -935,6 +943,12 @@ button, input, select, option, textarea {
     font-size: 30px;
     line-height: 39px;
     font-weight: 700;
+}
+
+.item-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .item-card {
@@ -1022,6 +1036,7 @@ button, input, select, option, textarea {
 }
 
 .to-wishlist-button {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 21px;
     text-transform: uppercase;
@@ -1163,7 +1178,11 @@ button, input, select, option, textarea {
 }
 
 .pagination {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .pagination-block {
@@ -1173,6 +1192,7 @@ button, input, select, option, textarea {
 }
 
 .pagination-link {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: inline-block;
     width: 55px;
     height: 55px;
