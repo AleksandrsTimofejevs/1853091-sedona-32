@@ -110,19 +110,19 @@
                     <legend class="filter-products-title">Тип жилья:</legend>
                     <div class="label-container">
                         <label class="control">
-                            <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
+                            <input class="visually-hidden filter-products-type" type="radio" name="hotel-type"
                                 value="hotel" checked>
                             <span class="control-mark"></span>
                             <span class="control-label">Гостиница</span>
                         </label>
                         <label class="control">
-                            <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
+                            <input class="visually-hidden filter-products-type" type="radio" name="hotel-type"
                                 value="motel">
                             <span class="control-mark"></span>
                             <span class="control-label">Мотель</span>
                         </label>
                         <label class="control">
-                            <input class="visually-hidden filter-products-services" type="radio" name="hotel-type"
+                            <input class="visually-hidden filter-products-type" type="radio" name="hotel-type"
                                 value="appartment">
                             <span class="control-mark"></span>
                             <span class="control-label">Апартаменты</span>
@@ -133,20 +133,20 @@
                     <legend class="filter-products-title">Стоимость, ₽:</legend>
                     <div class="pricing-container">
                         <div class="input-container">
-                            <label><input class="filter-products-input" type="number" name="min-price"
+                            <label class="filter-products-input-label"><input class="filter-products-input" min="0" type="number" name="min-price"
                                     value="0">от</label>
-                            <label><input class="filter-products-input" type="number" name="max-price"
+                            <label class="filter-products-input-label"><input class="filter-products-input" max="9000" type="number" name="max-price"
                                     value="9000">до</label>
                         </div>
 
                         <div class="slider">
-                            <input type="range" name="left-toggle" id="left-toggle" min="0" max="9000" value="0">
-                            <input type="range" name="left-toggle" id="left-toggle" min="0" max="9000" value="8000">
                             <div class="two-toggle-slider">
-                                <div class="line"></div>
-                                <div class="selected-range"></div>
-                                <div class="left-toggle"></div>
-                                <div class="right-toggle"></div>
+                                <div class="line">
+                                    <div class="selected-range" style="width: 227px; height: 4px;">
+                                        <div class="left-toggle"></div>
+                                        <div class="right-toggle"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -425,7 +425,6 @@
         </a>
 
     </footer>
-
 </body>
 
 </html>

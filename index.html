@@ -231,6 +231,81 @@
     </a>
 
   </footer>
+
+  <div class="modal-container">
+    <div class="modal modal-search">
+      <div class="modal-header">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg class="modal-close-button-cross" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"/>
+          </svg>
+        </button>
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      </div>
+      <form class="modal-form" action="https://echo.htmlacademy.ru/" method="GET">
+          <div class="arrival-date-container">
+              <label class="arrival-date-label" for="arrival-date">Дата заезда:</label>
+              <input class="arrival-date-input" type="date" name="arrival-date" id="arrival-date" >
+              <span class="error-alert">Мы не можем отправить вас в прошлое</span>
+          </div>
+          <div class="departure-date-container">
+              <label class="departure-date-label" for="departure-date">Дата выезда:</label>
+              <input class="departure-date-input" type="date" name="departure-date" id="departure-date">
+              <span class="availability-alert">На эти даты есть свободные номера. Пока есть.</span>
+              <span class="unavailability-alert allert-hidden">На эти даты нет свободных номеров. Совсем нет.</span>
+          </div>
+          <div class="tourist-quantity">
+              <label class="adults-quantity-label" for="adults-quantity" class="adults">Взрослые:</label>
+              <div class="adults-quantity-input-container">
+                <button type="button" class="minus-input-button">
+                  <svg class="minus-input-toggle" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 1L13 1V0L0 0Z"/>
+                  </svg> 
+                </button>                 
+                <input class="adults-quantity-input" type="number" name="adults-quantity" id="adults-quantity" value="1" min="1">
+                <button type="button" class="plus-input-button">
+                  <svg class="plus-input-toggle" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="infants-label-container">
+                <label class="infants-quantity-label" for="infants-quantity" class="infants">Дети:</label>
+                <svg class="infants-tooltip" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12.5" cy="12.5" r="12.5"/>
+                </svg>
+                <svg class="infants-tooltip-letter" width="1" height="9" viewBox="0 0 1 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_317:40)">
+                  <path d="M0 9H1L1 3H0L0 9Z"/>
+                  <path d="M1 0H0V1H1V0Z"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_317:40">
+                  <rect width="1" height="9"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="infants-quantity-input-container">
+                <button type="button" class="minus-input-button">
+                  <svg class="minus-input-toggle" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 1L13 1V0L0 0Z"/>
+                  </svg> 
+                </button>  
+                <input class="infants-quantity-input" type="number" name="infants-quantity" id="infants-quantity" value="0" min="0">
+                <button type="button" class="plus-input-button">
+                  <svg class="plus-input-toggle" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                  </svg>
+                </button>
+              </div>
+          </div>
+          <button class="modal-submit-button" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 
 </html>

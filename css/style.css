@@ -716,8 +716,126 @@ body {
     color: white;
 }
 
-.control:not(:last-child) {
+.control {
+    display: flex;
     margin-bottom: 13px;
+}
+
+.control-mark {
+    display: inline-block;
+    background-color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 19px;
+    position: relative;
+}
+
+.filter-products-services:checked + .control-mark {
+    background-image: url('../img/checkbox-tick.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.filter-products-type + .control-mark {
+    border-radius: 50%;
+}
+
+.filter-products-type:checked + .control-mark::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(63, 94, 114, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+/* Сброс переключателя значений у <input type="number"> для всех браузеров */
+
+.filter-products-input[type="number"]::-webkit-outer-spin-button,
+.filter-products-input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filter-products-input[type="number"] {
+    -moz-appearance: textfield;
+}
+.filter-products-input[type="number"]:hover,
+.filter-products-input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+.filter-products-input[type=number]::-webkit-inner-spin-button,
+.filter-products-input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    width: 287px;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+}
+
+.filter-products-input {
+    height: 48px;
+    width: 85px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+}
+
+.filter-products-input-label {
+    color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    padding-right: 14px;
+    padding-left: 17px;
+}
+
+.filter-products-input-label:first-child {
+    border-right: 2px solid rgba(255, 255, 255, 1);
+}
+
+.slider {
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 287px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.selected-range {
+    background-color: #FFFFFF;
+    position: absolute;
+}
+
+.left-toggle,
+.right-toggle {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: -8px;
+}
+
+.right-toggle {
+    right: 0;
 }
 
 .submit-button {
@@ -889,7 +1007,18 @@ body {
 
 .select-sorting {
     width: 287px;
+    height: 48px;
+    font-size: 18px;
+    font-family: inherit;
     margin-right: 81px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(229, 229, 229, 1);
+    border-radius: 4px;
+    -webkit-appearance: none;
+    background-image: url('../img/select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 254px 50%;
 }
 
 .catalog-style {
@@ -1291,6 +1420,17 @@ body {
     width: 160px;
     height: 48px;
     margin-left: 51px;
+    padding-left: 17px;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(229, 229, 229, 1);
+    border-radius: 4px;
+    -webkit-appearance: none;
+    background-image: url('../img/select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 127px 50%;
 }
 
 .newsletter-catalog {
@@ -1304,6 +1444,327 @@ body {
 .newsletter-catalog-title,
 .newsletter-catalog-info {
     color: #000000;
+}
+
+.modal-container {
+    position: fixed;
+    display: flex;
+    background-color: rgba(242, 242, 242, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.modal {
+    display: grid;
+    grid-template-columns: 68px 576px 71px;
+    grid-template-rows: 54px
+                        53px
+                        54px
+                        330px
+                        70px;
+    margin: auto;
+    box-sizing: border-box;
+    width: 715px;
+    height: 561px;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.modal-header {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-title {
+    font-size: 30px;
+    line-height: 53px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.modal-close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    width: 53px;
+    height: 53px;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.modal-close-button-cross {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.modal-close-button:hover {
+    background-color: rgba(229, 229, 229, 1);
+}
+
+.modal-close-button:focus {
+    background-color: rgba(229, 229, 229, 1);
+    border: 3px solid rgba(131, 179, 211, 1);
+}
+
+.modal-close-button:active .modal-close-button-cross {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-form {
+    grid-area: 4 / 2 / 5 / 3;
+    display: grid;
+    grid-template-columns: 576px;
+    grid-template-rows: 90px
+                        90px
+                        50px
+                        39px
+                        61px;
+}
+
+.arrival-date-container {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.arrival-date-label,
+.departure-date-label,
+.adults-quantity-label,
+.infants-quantity-label {
+    display: block;
+    box-sizing: border-box;
+    width: 155px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.adults-quantity-input,
+.infants-quantity-input {
+    box-sizing: border-box;
+    display: block;
+    width: 133px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: inherit;
+    text-align: center;
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.adults-quantity-input[type="number"],
+.infants-quantity-input[type="number"] {
+    -moz-appearance: textfield;
+}
+.adults-quantity-input[type="number"]:hover,
+.adults-quantity-input[type="number"]:focus,
+.infants-quantity-input[type="number"]:hover,
+.infants-quantity-input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+.adults-quantity-input[type=number]::-webkit-inner-spin-button,
+.adults-quantity-input[type=number]::-webkit-outer-spin-button,
+.infants-quantity-input[type=number]::-webkit-inner-spin-button,
+.infants-quantity-input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.infants-quantity-label {
+    width: 97px;
+    margin-left: 56px;
+}
+
+.arrival-date-input,
+.departure-date-input {
+    display: block;
+    width: 420px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(242, 242, 242, 1);
+    border: 3px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: inherit;
+    padding-left: 19px;
+    background-image: url('../img/calendar-decorative.svg');
+    background-repeat: no-repeat;
+    background-position: 386px 50%;
+}
+
+.arrival-date-input:hover,
+.departure-date-input:hover {
+    background-color: rgba(229, 229, 229, 1);
+}
+
+.arrival-date-input:focus,
+.departure-date-input:focus {
+    background-color: rgba(229, 229, 229, 1);
+    border: 3px solid rgba(131, 179, 211, 1);
+}
+
+.arrival-date-input:active,
+.departure-date-input:active {
+    background-color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(0, 0, 0, 1);
+}
+
+.error-alert {
+    font-size: 16px;
+    color: rgba(255, 87, 87, 1);
+    font-weight: 400;
+    margin-left: 157px;
+}
+
+.departure-date-container {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.tourist-quantity {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plus-input-toggle,
+.minus-input-toggle {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.adults-quantity-input-container,
+.infants-quantity-input-container {
+    position: relative;
+}
+
+.plus-input-button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    outline: none;
+    border-radius: 4px;
+    top: 12px;
+    right: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minus-input-button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    outline: none;
+    top: 12px;
+    left: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus-input-button:hover .plus-input-toggle,
+.minus-input-button:hover .minus-input-toggle {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.plus-input-button:focus,
+.minus-input-button:focus {
+    border: 3px solid rgba(131, 179, 211, 1);
+    border-radius: 4px;
+}
+
+.plus-input-button:active .plus-input-toggle,
+.minus-input-button:active .minus-input-toggle {
+    fill: rgba(0, 0, 0, 0.1);
+}
+
+.plus-input-button:active,
+.minus-input-button:active {
+    border: 3px solid transparent;
+}
+
+.infants-label-container {
+    position: relative;
+}
+
+.infants-tooltip {
+    fill: rgba(131, 179, 211, 1);
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+
+.infants-tooltip:hover {
+    fill: rgba(104, 162, 202, 1);
+}
+
+/* .infants-tooltip-letter {
+    fill: white;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+} */
+
+.modal-submit-button {
+    grid-area: 5 / 1 / 6 / 2;
+    background-color: rgba(131, 179, 211, 1);
+    border-radius: 10px;
+    border: 3px solid transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.modal-submit-button:hover {
+    background-color: rgba(104, 162, 202, 1);
+}
+
+.modal-submit-button:focus {
+    background-color: rgba(104, 162, 202, 1);
+    border: 3px solid rgba(117, 98, 87, 1);
+}
+
+.modal-submit-button:active {
+    border: 3px solid transparent;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.availability-alert,
+.unavailability-alert,
+.error-alert {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 157px;
+    line-height: 29px;
+}
+
+.allert-hidden {
+    display: none;
 }
 
 
