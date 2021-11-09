@@ -31,9 +31,8 @@ body {
     line-height: 21px;
     background-color: #FFFFFF;
     color: #000000;
-    min-width: 1200px;
-    margin: 0;
-    padding: 0 40px;
+    width: 1200px;
+    margin: 0 40px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -85,7 +84,7 @@ body {
 }
 
 .navigation-link-container {
-    height: 65px;
+    min-height: 65px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -147,14 +146,15 @@ body {
     background-color: #756257;
     color: #FFFFFF;
     width: 160px;
-    height: 37px;
+    min-height: 37px;
     border-radius: 4px;
     text-align: center;
 }
 
 .navigation-user-link:last-child {
     display: inline-block;
-    padding: 0.5rem 2rem;
+    line-height: 18px;
+    padding: 10px;
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -207,7 +207,7 @@ body {
 
 /* Анонс */
 
-.intro-title, 
+.intro-title,
 .hotel-booking-title {
     font-weight: 700;
     font-size: 30px;
@@ -231,9 +231,9 @@ body {
     display: block;
     width: 1200px;
     height: 485px;
-    background: 
-    url('../img/divider.svg') 0 100% no-repeat, 
-    url('../img/welcome.svg') 50% 50% no-repeat, 
+    background:
+    url('../img/divider.svg') 0 100% no-repeat,
+    url('../img/welcome.svg') 50% 50% no-repeat,
     url('../img/intro-background.jpg');
 }
 
@@ -255,6 +255,7 @@ body {
 
 .advantages-list-unordered {
     display: flex;
+    padding: 0;
 }
 
 .advantages-list-item {
@@ -392,12 +393,16 @@ body {
 .hotel-search-button {
     display: inline-block;
     width: 575px;
-    height: 60px;
+    min-height: 60px;
     box-sizing: border-box;
     border: 3px solid transparent;
     border-radius: 10px;
     text-align: center;
-    padding-top: 18px;
+    line-height: 30px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    padding-right: 17px;
+    padding-left: 17px;
     background-color: #756257;
     font-size: 20px;
     font-weight: 700;
@@ -426,11 +431,12 @@ body {
 .newsletter-container {
     display: grid;
     grid-template-columns: 200px 600px 200px 200px;
-    grid-template-rows: 94px 65px 98px 61px 93px;
+    grid-template-rows: 94px auto auto auto 93px;
 }
 
 .newsletter {
     background-image: url('../img/index-newsletter-background.jpg');
+    min-height: 411px;
 }
 
 .newsletter-title {
@@ -438,6 +444,7 @@ body {
     margin: 0;
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     color:#FFFFFF;
     text-align: center;
@@ -468,6 +475,7 @@ body {
     background-color: #83B3D3;
     border: 3px solid transparent;
     width: 200px;
+    min-height: 60px;
     border-radius: 0 10px 10px 0;
     text-transform: uppercase;
     outline: none;
@@ -522,7 +530,7 @@ body {
 
 .page-footer {
     display: flex;
-    height: 120px;
+    min-height: 120px;
     justify-content: space-between;
     align-items: center;
     padding: 0 72px;
@@ -589,7 +597,7 @@ body {
 .phone-number-link {
     display: inline-block;
     width: 361px;
-    height: 50px;
+    min-height: 50px;
     box-sizing: border-box;
     border: 3px solid transparent;
     border-radius: 10px;
@@ -662,10 +670,10 @@ body {
 
 .filter-products {
     width: 1200px;
-    background: url('../img/catalog-background.jpg') no-repeat;
+    background: url('../img/catalog-background.jpg') repeat;
     display: grid;
     grid-template-columns: 71px 1fr 72px;
-    grid-template-rows: 35px 94px 45px 151px 83px;
+    grid-template-rows: 35px auto 45px auto 83px;
 }
 
 .inner-header {
@@ -701,16 +709,17 @@ body {
     grid-column: 7 / 8;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
+    margin-top: 26px;
 }
 
 .label-container,
 .pricing-container {
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: flex-end;
+
 }
 
 .filter-products-title {
@@ -739,6 +748,7 @@ body {
     margin-right: 19px;
     position: relative;
     outline: 3px solid transparent;
+    flex-shrink: 0;
 }
 
 .filter-products-services:checked + .control-mark {
@@ -938,8 +948,9 @@ body {
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: inline-block;
     width: 160px;
-    height: 48px;
+    min-height: 48px;
     margin-bottom: 20px;
+    padding: 14px;
     background-color: #83B3D3;
     color: #FFFFFF;
     border-radius: 4px;
@@ -971,7 +982,7 @@ body {
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: inline-block;
     width: 100px;
-    height: 32px;
+    min-height: 32px;
     box-sizing: border-box;
     border: 3px solid transparent;
     border-radius: 4px;
@@ -994,7 +1005,7 @@ body {
     border: 3px solid transparent;
     color: rgba(255, 255, 255, 0.3);
 }
- 
+
 .inner-header-title {
     margin: 0;
     font-size: 60px;
@@ -1007,7 +1018,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     margin: 0;
     list-style-type: none;
     padding: 0;
@@ -1034,7 +1045,7 @@ body {
 
 .breadcrumbs-item:first-child {
     order: 1;
-    width: 28px;
+    min-width: 28px;
     height: 27px;
     box-sizing: border-box;
     border: 3px solid transparent;
@@ -1043,7 +1054,7 @@ body {
 
 .breadcrumbs-item:last-child {
     order: 3;
-    width: 89px;
+    min-width: 89px;
     height: 27px;
     box-sizing: border-box;
     border: 3px solid transparent;
@@ -1076,16 +1087,12 @@ body {
     color: #FFFFFF;
     text-decoration: none;
     outline: none;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     text-align: center;
 }
 
 .catalog-page-controls {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 50px 72px;
 }
@@ -1102,7 +1109,7 @@ body {
 }
 
 .select-sorting {
-    width: 287px;
+    min-width: 287px;
     height: 48px;
     font-size: 18px;
     font-family: inherit;
@@ -1259,6 +1266,7 @@ body {
 }
 
 .hotel-card-hints {
+    display: flex;
     margin-bottom: 31px;
 }
 
@@ -1281,7 +1289,7 @@ body {
     border-radius: 4px;
     border: 3px solid transparent;
     width: 160px;
-    height: 37px;
+    min-height: 37px;
     margin-right: 8px;
     outline: 0;
     cursor: pointer;
@@ -1310,7 +1318,7 @@ body {
     font-weight: 700;
     box-sizing: border-box;
     width: 151px;
-    height: 37px;
+    min-height: 37px;
     text-align: center;
     padding: 5px 0 5px 0;
     background-color: rgba(125, 181, 79, 1);
@@ -1339,13 +1347,14 @@ body {
     display: inline-block;
     color: #FFFFFF;
     font-size: 16px;
+    line-height: 18px;
     text-transform: uppercase;
     font-weight: 700;
     box-sizing: border-box;
     width: 151px;
-    height: 37px;
+    min-height: 37px;
     text-align: center;
-    padding: 5px 0 5px 0;
+    padding: 5px 10px 5px 10px;
     background-color: #756257;
     border-radius: 4px;
     border: 3px solid transparent;
@@ -1376,7 +1385,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     width: 160px;
-    height: 37px;
+    min-height: 37px;
     background-color: #F2F2F2;
     border-radius: #F2F2F2;
     border: none;
@@ -1422,15 +1431,18 @@ body {
 
 .pagination-block {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding-left: 72px;
+    padding-right: 72px;
 }
 
 .pagination-link {
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     display: inline-block;
-    width: 55px;
-    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     margin: 7px;
     background-color: #83B3D3;
     border-radius: 4px;
@@ -1439,7 +1451,7 @@ body {
     line-height: 49px;
     color: #FFFFFF;
     font-weight: 700;
-    text-transform: uppercase;   
+    text-transform: uppercase;
     box-sizing: border-box;
     text-align: center;
     vertical-align: middle;
@@ -1533,7 +1545,7 @@ body {
 }
 
 .preview-number-select {
-    width: 160px;
+    min-width: 160px;
     height: 48px;
     margin-left: 51px;
     padding-left: 17px;
@@ -2031,7 +2043,7 @@ body {
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* .popover-wishlist {
+.popover-wishlist {
     display: none;
-} */
+}
 
