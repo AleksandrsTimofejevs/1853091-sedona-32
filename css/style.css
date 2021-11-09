@@ -239,141 +239,83 @@ body {
 
 /* Список преимуществ */
 
-.advantages-list-item:last-child,
-.unordered-item {
-    width: 400px;
-    height: 384px;
-}
-
 .advantages-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto
+                        auto
+                        auto;
     list-style-type: none;
-}
-
-.advantages-list-unordered {
-    display: flex;
     padding: 0;
 }
 
-.advantages-list-item {
-    display: block;
-}
-
-.advantages-list-item-title {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 25px;
-    width: 180px;
-    text-align: center;
-}
-
-.advantages-list-item-description {
-    text-align: center;
-}
-
-.first-advantage {
-    background-color: #83B3D3;
-    color: #FFFFFF;
-    height: 384px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.first-advantage::after {
-    content: '';
-    width: 800px;
-    height: 384px;
-    background: url('../img/open-range.jpg') no-repeat;
-}
-
-.first-advantage-container,
-.second-advantage-container,
 .advantages-list-item-container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 384px;
-}
-
-.advantages-list-item-description {
-    width: 250px;
-}
-
-.list-item-description-narrow {
-    width: 220px;
-}
-
-.second-advantage {
-    width: 1200px;
-    height: 384px;
-    display: flex;
-    flex-direction: row;
-    color: #FFFFFF;
-    background-color: #83B3D3;
-}
-
-.second-advantage::before {
-    content: '';
-    width: 800px;
-    height: 384px;
-    background: url('../img/devils-bridge.jpg') no-repeat;
-}
-
-.unordered-item {
-    display: flex;
+    min-height: 384px;
     box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.description-unordered {
-    margin: 0;
-}
-
-.list-item-light-fill {
+    padding: 90px 75px 80px;
+    font-size: 18px;
+    line-height: 21px;
     background-color: rgba(131, 179, 211, 0.12);
 }
 
-.list-item-dark-fill {
-    background-color: rgba(131, 179, 211, 0.2);
+.first-advantage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-area: 1 / 1 / 2 / 4;
 }
 
-.unordered-item:first-child::before {
-    content: '';
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    background: url('../img/accommodations.svg') no-repeat;
-    margin-bottom: 23px;
+.first-advantage-container {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgba(131, 179, 211, 1);
+    color: #FFFFFF;
 }
 
-.unordered-item:not(:first-child):not(:last-child)::before {
-    content: '';
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    background: url('../img/eats.svg') no-repeat;
-    margin-bottom: 23px;
+.fourth-advantage-container {
+    background-color: rgba(131, 179, 211, 0.2)
 }
-.unordered-item:last-child::before {
-    content: '';
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    background: url('../img/souvenirs.svg') no-repeat;
-    margin-bottom: 23px;
+
+.second-unordered-advantage-container {
+    background-color: #FFFFFF;
 }
+
+.advantages-list-unordered {
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.second-advantage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.second-advantage-container {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgba(131, 179, 211, 1);
+    color: #FFFFFF;
+}
+
+.advantages-list-item-title {
+    margin-top: 23px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.advantages-list-item-description {
+    margin: 0;
+    text-align: center;
+}
+
 
 /* Блок ведущий к поиску гостиниц */
 
@@ -432,11 +374,13 @@ body {
     display: grid;
     grid-template-columns: 200px 600px 200px 200px;
     grid-template-rows: 94px auto auto auto 93px;
+    background: url('../img/index-newsletter-background.jpg') no-repeat;
+    background-color: rgba(131, 179, 211, 1);
+    min-height: 411px;
 }
 
 .newsletter {
-    background-image: url('../img/index-newsletter-background.jpg');
-    min-height: 411px;
+
 }
 
 .newsletter-title {
@@ -670,7 +614,8 @@ body {
 
 .filter-products {
     width: 1200px;
-    background: url('../img/catalog-background.jpg') repeat;
+    background: url('../img/catalog-background.jpg') no-repeat;
+    background-color: rgba(131, 179, 211, 1);
     display: grid;
     grid-template-columns: 71px 1fr 72px;
     grid-template-rows: 35px auto 45px auto 83px;
