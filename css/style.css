@@ -968,19 +968,35 @@ body {
     font-weight: 700;
 }
 
+/* Хлебные крошки */
+
 .breadcrumbs {
     position: relative;
     font-size: 16px;
     line-height: 21px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0;
     list-style-type: none;
     padding: 0;
 }
 
-.breadcrumbs-item:not(:first-child) {
-    margin-right: 10px;
+.breadcrumbs-item {
+    position: relative;
+    margin-right: 26px;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.breadcrumbs-link {
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
 }
 
 .breadcrumbs-home-icon {
@@ -988,35 +1004,15 @@ body {
     margin: auto;
 }
 
-.breadcrumbs-item::after {
-    position: absolute;
-    top: 1px;
-    right: -2px;
+.breadcrumbs-item:not(:last-child)::after {
     content: '';
-    width: 5px;
-    height: 21px;
-    background: url('../img/breadcrumbs_arrow.svg') 50% 50% no-repeat;
-}
-
-.breadcrumbs-item:first-child {
-    min-width: 28px;
-    height: 27px;
-    box-sizing: border-box;
-    border: 3px solid transparent;
-    position: relative;
-}
-
-.breadcrumbs-item:last-child {
-    min-width: 89px;
-    height: 27px;
-    box-sizing: border-box;
-    border: 3px solid transparent;
-    border-radius: 4px;
-    position: relative;
-}
-
-.breadcrumbs-item:last-child::after {
-    content: none;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: -17px;
+    width: 6px;
+    height: 8px;
+    background: url('../img/breadcrumbs_arrow.svg') no-repeat;
 }
 
 .breadcrumbs-link:hover .breadcrumbs-home-icon {
@@ -1040,12 +1036,7 @@ body {
     border: 3px solid transparent;
 }
 
-.breadcrumbs-link {
-    color: #FFFFFF;
-    text-decoration: none;
-    outline: none;
-    text-align: center;
-}
+/*  */
 
 .catalog-page-controls {
     display: flex;
