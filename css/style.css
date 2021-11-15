@@ -36,7 +36,6 @@ body {
 }
 
 img {
-  max-width: 100%;
   object-fit: contain;
 }
 
@@ -1587,7 +1586,7 @@ img {
 }
 
 .newsletter-catalog-title {
-    margin-top: 89px;
+    margin-top: 85px;
 }
 
 .modal-container {
@@ -1804,6 +1803,7 @@ img {
     height: 25px;
     box-sizing: border-box;
     border: 3px solid transparent;
+    background-color: rgba(242, 242, 242, 1);
     outline: none;
     border-radius: 4px;
     top: 12px;
@@ -1820,6 +1820,7 @@ img {
     box-sizing: border-box;
     border-radius: 4px;
     border: 3px solid transparent;
+    background-color: rgba(242, 242, 242, 1);
     outline: none;
     top: 12px;
     left: 19px;
@@ -1858,6 +1859,19 @@ img {
     position: absolute;
     top: 12px;
     right: 16px;
+}
+
+.infants-tooltip-container::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 124px;
+    width: 1px;
+    height: 9px;
+    background: url('../img/i-letter-for-tooltip.svg') 50% 50% no-repeat;
+    background-color: transparent;
+    z-index: 1;
 }
 
 .infants-tooltip:hover {
@@ -1919,6 +1933,20 @@ img {
     background-color: #FFFFFF;
     font-family: inherit;
     color: #000000;
+}
+
+.popover::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 193px;
+    width: 15px;
+    height: 15px;
+    background-color: #FFFFFF;
+    border-top: 1px solid rgba(228, 228, 228, 1);
+    border-right: 1px solid rgba(228, 228, 228, 1);
+    transform: rotate(-45deg);
+    z-index: 1;
 }
 
 .popover-main {
