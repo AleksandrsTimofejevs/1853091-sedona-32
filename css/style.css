@@ -59,6 +59,11 @@ img {
     justify-content: space-between;
     align-items: center;
     min-height: 65px;
+    box-sizing: border-box;
+}
+
+.navigation-item {
+    box-sizing: border-box;
 }
 
 .navigation-list {
@@ -88,8 +93,6 @@ img {
 .navigation-user-menu {
   order: 3;
   box-sizing: border-box;
-  padding-top: 14px;
-  padding-bottom: 14px;
   padding-right: 72px;
   justify-content: flex-end;
 }
@@ -227,6 +230,7 @@ img {
 .navigation-link-container {
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     height: 65px;
 }
 
