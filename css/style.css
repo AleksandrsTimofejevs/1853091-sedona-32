@@ -126,6 +126,7 @@ img {
 
 .navigation-user-link {
     display: inline-block;
+    position: relative;
     box-sizing: border-box;
     border: 3px solid transparent;
     width: 38px;
@@ -155,10 +156,25 @@ img {
     border: 3px solid transparent;
 }
 
+.wishlist-count {
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    width: 19px;
+    height: 19px;
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: rgba(125, 181, 80, 1);
+    border-radius: 50%;
+}
+
 .navigation-icon {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px;
+    left: 7px;
     fill: #000000;
 }
 
