@@ -526,7 +526,7 @@ img {
   border: 2px solid rgba(0, 0, 0, 1);
 }
 
-.email-input-error {
+.email-input:invalid {
   border: 2px solid rgba(255, 87, 87, 1);
 }
 
@@ -800,6 +800,10 @@ img {
   outline: 3px solid transparent;
 }
 
+.filter-products-services:disabled+.control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 .filter-products-type+.control-mark {
   border-radius: 50%;
   outline: 3px solid transparent;
@@ -829,6 +833,10 @@ img {
 .filter-products-type:active+.control-mark {
   opacity: 0.3;
   outline: 3px solid transparent;
+}
+
+.filter-products-type:disabled+.control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Сброс переключателя значений у <input type="number"> для всех браузеров */
@@ -1242,16 +1250,16 @@ img {
 
 .hotel-card-title {
   font-size: 24px;
-  line-height: 31px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 5px;
 }
 
 .hotel-card-title-link {
   text-decoration: none;
   display: inline-block;
+  line-height: 31px;
   color: #000000;
+  border: 3px solid transparent;
   outline: none;
 }
 
@@ -1260,7 +1268,6 @@ img {
 }
 
 .hotel-card-title-link:focus {
-  padding: 7px 12px;
   border: 3px solid rgba(131, 179, 211, 1);
   border-radius: 10px;
 }
@@ -1726,6 +1733,11 @@ img {
 .infants-quantity-label {
   width: 97px;
   margin-left: 56px;
+}
+
+.arrival-date-input[type=date]::-webkit-calendar-picker-indicator,
+.departure-date-input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 
 .arrival-date-input,
