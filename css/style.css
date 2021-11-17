@@ -293,7 +293,7 @@ img {
   width: 400px;
   min-height: 384px;
   box-sizing: border-box;
-  padding: 85px 75px 90px;
+  padding: 85px 75px;
   font-size: 18px;
   line-height: 21px;
   background-color: rgba(131, 179, 211, 0.12);
@@ -338,7 +338,7 @@ img {
 }
 
 .advantages-list-item-title {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: 700;
@@ -377,7 +377,9 @@ img {
 /* Блок ведущий к поиску гостиниц */
 
 .hotel-booking-container {
-  padding: 85px 240px;
+  min-height: 417px;
+  box-sizing: border-box;
+  padding-top: 89px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -438,6 +440,8 @@ img {
 
 .newsletter-container {
   display: flex;
+  padding-top: 89px;
+  box-sizing: border-box;
   flex-direction: column;
   width: 800px;
   min-height: 411px;
@@ -445,8 +449,8 @@ img {
 }
 
 .newsletter-title {
-  margin-top: 95px;
-  margin-bottom: 28px;
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -462,7 +466,7 @@ img {
   margin: 0;
   align-self: center;
   text-align: center;
-  margin-bottom: 46px;
+  margin-bottom: 50px;
 }
 
 .subscription-button {
@@ -610,6 +614,7 @@ img {
   box-sizing: border-box;
   text-align: center;
   padding-left: 25px;
+  padding-top: 32px;
 }
 
 .phone-number-link {
@@ -620,7 +625,6 @@ img {
   border: 3px solid transparent;
   border-radius: 10px;
   font-size: 40px;
-  line-height: 64px;
   color: #000000;
   text-decoration: none;
   outline: none;
