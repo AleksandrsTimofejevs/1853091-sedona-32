@@ -275,6 +275,7 @@ img {
     url('../img/divider.svg') 0 100% no-repeat,
     url('../img/welcome.svg') 50% 38% no-repeat,
     url('../img/intro-background.jpg');
+  background-color: #a0a0a07c;
 }
 
 /* Список преимуществ */
@@ -349,6 +350,33 @@ img {
   text-align: center;
 }
 
+.advantages-list-item-unordered:first-child .advantages-list-item-container::before {
+  content: '';
+  display: block;
+  width: 75px;
+  height: 76px;
+  background: url('../img/accommodations.svg') 50% 100% no-repeat;
+  margin-bottom: 25px;
+}
+
+.advantages-list-item-unordered:last-child .advantages-list-item-container::before {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 76px;
+  background: url('../img/souvenirs.svg') 50% 100% no-repeat;
+  margin-bottom: 25px;
+}
+
+.advantages-list-item-unordered:not(:last-child):not(:first-child) .advantages-list-item-container::before {
+  content: '';
+  display: block;
+  width: 74px;
+  height: 76px;
+  background: url('../img/eats.svg') 50% 100% no-repeat;
+  margin-bottom: 25px;
+}
+
 .advantages-list-item-title-unordered {
   font-size: 24px;
   line-height: 28px;
@@ -362,19 +390,10 @@ img {
   margin-bottom: 29px;
 }
 
-.advantages-list-item-decoration-unordered-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 76px;
-  margin-bottom: 23px;
-}
-
 .advantages-list-item-description {
   margin: 0;
   text-align: center;
 }
-
 
 /* Блок ведущий к поиску гостиниц */
 
@@ -867,14 +886,14 @@ img {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   width: 290px;
   border-radius: 4px;
 }
 
 .filter-products-input {
   height: 45px;
-  width: 85px;
+  width: 92px;
   outline: none;
   border: none;
   background-color: transparent;
@@ -886,7 +905,7 @@ img {
   color: rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
-  padding-right: 14px;
+  padding-right: 10px;
   padding-left: 17px;
   border: 2px solid rgba(255, 255, 255, 1);
 }
